@@ -15,7 +15,7 @@ if __name__ == "__main__":
              .config("spark.jars.packages",
                      "org.apache.spark:spark-sql-kafka-0-10_2.13:3.5.0")  # Spark-Kafka integration
              .config("spark.jars",
-                     "./postgresql-42.7.1.jar")  # PostgreSQL driver
+                     "/workspaces/ElectionStream-DataEngineer-Journey/postgresql-42.7.1.jar")  # PostgreSQL driver
              .config("spark.sql.adaptive.enabled", "false")  # Disable adaptive query execution
              .getOrCreate())
 
@@ -76,7 +76,7 @@ if __name__ == "__main__":
         .format("kafka") \
         .option("kafka.bootstrap.servers", "localhost:9092") \
         .option("topic", "aggregated_votes_per_candidate") \
-        .option("checkpointLocation", "./checkpoints/checkpoint1") \
+        .option("checkpointLocation", "/workspaces/ElectionStream-DataEngineer-Journey/checkpoints/checkpoint1") \
         .outputMode("update") \
         .start()
 
@@ -85,7 +85,7 @@ if __name__ == "__main__":
         .format("kafka") \
         .option("kafka.bootstrap.servers", "localhost:9092") \
         .option("topic", "aggregated_turnout_by_location") \
-        .option("checkpointLocation", "./checkpoints/checkpoint1") \
+        .option("checkpointLocation", "/workspaces/ElectionStream-DataEngineer-Journey/checkpoints/checkpoint2") \
         .outputMode("update") \
         .start()
 
