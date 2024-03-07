@@ -1,11 +1,25 @@
-## 🚀 Real-Time Voting System with Apache Kafka, Apache Spark, and Streamlit 🚀
+## 🚀 Real-Time Voting System 
 
-Welcome to the repository for a comprehensive real-time voting system built using state-of-the-art bidata technologies. Inspired by recent elections, this project offers an end-to-end exploration of the election process, providing insights into the intricate world of real-time data streaming and processing.
+Through this project i learn comprehensive real-time voting system. This project was inspired by recent indonesia elections and takes you through the entire election process.
+
+## Election Flow
+![Election Flow](./assets/Election%20Flow.png)
 
 ## Architecture
+![Architecture](./assets/Architecture.png)
 
+## Dataset
+### Candidates & Parties
+![Candidates](./assets/candidates_dataset.png)
+### Voters
+![Voters](./assets/voters_dataset.png)
+### Voting
+![Voting](./assets/voting-kafka.png)
 
 ## Stack
+- Python & SQL
 - Apache Kafka
 - Apache Spark
 - Streamlit
+
+## Code Flow
